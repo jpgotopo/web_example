@@ -28,25 +28,29 @@ class Contactanos extends StatelessWidget {
                   child: Text('Contáctanos', style: TextStyle(color: Colors.white, fontSize: 45.0, fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
                 ),
                 Row(
+                 
                   children: <Widget>[
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
                         Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Container(
-                              height: 80.0,
-                              width: 80.0,
+                              
+                              height: 60.0,
+                              width: 60.0,
                               decoration: BoxDecoration(
-                                color: Colors.transparent,
-                                //image: DecorationImage(image: AssetImage('facebook.png'))
+                                color: Colors.white,
+                                shape: BoxShape.circle,
+                                
+                                image: DecorationImage(image: NetworkImage('https://image.flaticon.com/icons/svg/1400/1400477.svg'), fit: BoxFit.fill)
                               ),
-                              child: Image.asset('facebook.png')
+                              //child: Image.asset('behance.png')
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Text('jpdesignsweb'),
+                              padding: const EdgeInsets.all(15.0),
+                              child: Text('jpdesignsweb', style: TextStyle(color: Colors.white, fontSize:20, fontWeight: FontWeight.bold),),
                             )
                           ],
                         ),
