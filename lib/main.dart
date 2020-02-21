@@ -39,7 +39,7 @@ class MyHomePage extends StatelessWidget {
           children: <Widget>[
             NavBar(),
             SizedBox(height: 50),
-            CentralBody()
+            CentralBody(),
           ],
         ),
       ),

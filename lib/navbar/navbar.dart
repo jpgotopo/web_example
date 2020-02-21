@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:web_example/contactanos/contactanos.dart';
+import 'package:web_example/main.dart';
+import 'package:web_example/nosotros/nosotros.dart';
+import 'package:web_example/portafolio/portafolio.dart';
 
 class NavBar extends StatelessWidget {
   const NavBar({Key key}) : super(key: key);
@@ -29,7 +33,7 @@ class DesktopNavBar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             _logoJPD(),
-            _menuNavBar()
+            _menuNavBar(context)
           ],
         ),
       ),
@@ -60,26 +64,50 @@ Widget _logoJPD(){
   );
 }
 
-Widget _menuNavBar(){
+Widget _menuNavBar(BuildContext context){
   return Container(
     child: Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 6.0),
-          child: Text('Inicio', style: TextStyle(color: Colors.white)),
+          child: FlatButton(child: Text('Inicio', style: TextStyle(color: Colors.white)), 
+          onPressed: (){
+            Navigator.push(
+              context, 
+              MaterialPageRoute(builder: (context) => MyApp()));
+          },),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 6.0),
-          child: Text('Nosotros', style: TextStyle(color: Colors.white)),
+          child: FlatButton(child: Text('Nosotros', style: TextStyle(color: Colors.white)),
+            onPressed: (){
+              Navigator.push(
+                context, 
+                MaterialPageRoute(builder: (context) => Nosotros()));
+            },
+          ),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 6.0),
-          child: Text('Portafolio', style: TextStyle(color: Colors.white)),
+          child: FlatButton(child: Text('Portafolio', style: TextStyle(color: Colors.white)),
+            onPressed: (){
+              Navigator.push(
+                context, 
+                MaterialPageRoute(builder: (context) => Portafolio()));
+            },
+          ),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 6.0),
-          child: Text('Contáctanos', style: TextStyle(color: Colors.white)),
+          child: FlatButton(child: Text('Contáctanos', style: TextStyle(color: Colors.white)),
+            onPressed: () {
+              Navigator.push(
+                context, 
+                MaterialPageRoute(builder: (context) => Contactanos()));
+            },
+          
+          ),
         ),
       ],
     ),
@@ -98,7 +126,7 @@ class MobileNavBar extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(12.0),
-            child: _menuNavBar(),
+            child: _menuNavBar(context),
           )
         ],
       ),

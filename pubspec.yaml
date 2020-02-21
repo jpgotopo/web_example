@@ -44,6 +44,16 @@ flutter:
   assets:
     - logo-jpd-new.png
     - image-web.png
+    - awesome-draw-polygon.png
+    - awesome-mobile-alt.png
+    - material-web.png
+    - diseñoweb-2.jpg
+    - facebook.png
+    - instagram.png
+    - behance.png
+    - twitter.png
+    
+ 
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
