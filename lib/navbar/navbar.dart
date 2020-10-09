@@ -71,7 +71,7 @@ Widget _menuNavBar(BuildContext context){
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 6.0),
-          child: FlatButton(child: Text('Inicio', style: TextStyle(color: Colors.white)), 
+          child: FlatButton(child: Text('Inicio', style: TextStyle(color: Colors.white, fontSize: 18)), 
           onPressed: (){
             Navigator.push(
               context, 
@@ -80,7 +80,7 @@ Widget _menuNavBar(BuildContext context){
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 6.0),
-          child: FlatButton(child: Text('Nosotros', style: TextStyle(color: Colors.white)),
+          child: FlatButton(child: Text('Nosotros', style: TextStyle(color: Colors.white, fontSize: 18)),
             onPressed: (){
               Navigator.push(
                 context, 
@@ -90,7 +90,7 @@ Widget _menuNavBar(BuildContext context){
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 6.0),
-          child: FlatButton(child: Text('Portafolio', style: TextStyle(color: Colors.white)),
+          child: FlatButton(child: Text('Portafolio', style: TextStyle(color: Colors.white, fontSize: 18)),
             onPressed: (){
               Navigator.push(
                 context, 
@@ -100,7 +100,7 @@ Widget _menuNavBar(BuildContext context){
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 6.0),
-          child: FlatButton(child: Text('Contáctanos', style: TextStyle(color: Colors.white)),
+          child: FlatButton(child: Text('Contáctanos', style: TextStyle(color: Colors.white, fontSize: 18)),
             onPressed: () {
               Navigator.push(
                 context, 

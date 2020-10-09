@@ -28,33 +28,26 @@ class Contactanos extends StatelessWidget {
                   child: Text('Contáctanos', style: TextStyle(color: Colors.white, fontSize: 45.0, fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
                 ),
                 Row(
-                 
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
                     Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Container(
-                              
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                shape: BoxShape.circle,
-                                
-                                image: DecorationImage(image: NetworkImage('https://image.flaticon.com/icons/svg/1400/1400477.svg'), fit: BoxFit.fill)
-                              ),
-                              //child: Image.asset('behance.png')
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(15.0),
-                              child: Text('jpdesignsweb', style: TextStyle(color: Colors.white, fontSize:20, fontWeight: FontWeight.bold),),
-                            )
-                          ],
-                        ),
+                        IconSocial(icono: 'facebook.png', cuenta: 'jpdesignsweb',),
+                        IconSocial(icono: 'instagram.png', cuenta: 'jpdesignsweb',),
+                        IconSocial(icono: 'twitter.png', cuenta: 'jpdesignsweb1',),
+                        IconSocial(icono: 'behance.png', cuenta: 'jpgotopo',),
                       ],
+                      
+                    ),
+                    Container(
+                      child: Image.asset('texto-central.png')
+                    ),
+                    Transform.rotate(
+                      angle: 25.0,
+                      child: Container(
+                        child: Image.asset('logo-opaco.png')
+                      ),
                       
                     )
                   ],
@@ -63,6 +56,41 @@ class Contactanos extends StatelessWidget {
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class IconSocial extends StatelessWidget {
+  final String icono;
+  final String cuenta;
+  const IconSocial({
+    Key key, @required this.icono, @required this.cuenta
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: <Widget>[
+          Container(
+            
+            height: 80.0,
+            width: 80.0,
+            decoration: BoxDecoration(
+              color: Colors.transparent,
+              shape: BoxShape.circle,
+              
+              image:DecorationImage(image: AssetImage(icono))
+            ),
+            //child: Image.asset('behance-icon.png')
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Text(cuenta, style: TextStyle(color: Colors.white, fontSize:20, fontWeight: FontWeight.bold),),
+          )
+        ],
       ),
     );
   }
